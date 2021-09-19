@@ -1,25 +1,36 @@
 // NOTE! The steps in this file are basically identical to the ones you
 // performed in the SpeakHello.js file.
 
-// STEP 6: Wrap the entire contents of SpeakGoodBye.js inside of an IIFE
+// STEP 6: Wrap the entire contents of SpeakGoodBye.js inside of an IIFE                ** DONE **
 // See Lecture 52, part 2
 
+(function (window){
 
-// STEP 7: Create an object, called 'byeSpeaker' to which you will attach
+  var byeSpeaker = function speak(name) {
+    console.log(speakWord + " " + name);
+ } ;
+
+   var speakWord = "Good Bye";
+
+   window.byeSpeaker = byeSpeaker ;
+   
+})(window);
+
+// STEP 7: Create an object, called 'byeSpeaker' to which you will attach            ** DONE **
 // the "speak" method and which you will expose to the global context
 // See Lecture 52, part 1
-// var byeSpeaker =
+// var byeSpeaker = 
 
-// DO NOT attach the speakWord variable to the 'byeSpeaker' object.
-var speakWord = "Good Bye";
+// DO NOT attach the speakWord variable to the 'byeSpeaker' object.                   ** DONE **
+// var speakWord = "Good Bye";
 
-// STEP 8: Rewrite the 'speak' function such that it is attached to the
+// STEP 8: Rewrite the 'speak' function such that it is attached to the               ** DONE **
 // byeSpeaker object instead of being a standalone function.
 // See Lecture 52, part 2
-function speak(name) {
-  console.log(speakWord + " " + name);
-}
+// function speak(name) {
+//   console.log(speakWord + " " + name);
+// }
 
-// STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it
+// STEP 9: Expose the 'byeSpeaker' object to the global scope. Name it              ** DONE **
 // 'byeSpeaker' on the global scope as well.
 // xxxx.xxxx = byeSpeaker;
